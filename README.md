@@ -24,7 +24,7 @@ e.g.
     <td><tt>['hosts']['file']</tt></td>
     <td>string</td>
     <td>location of published file</td>
-    <td><tt>/etc/hosts.test</tt></td>
+    <td><tt>/etc/hosts</tt></td>
   </tr>
   <tr>
     <td><tt>['hosts']['owner']</tt></td>
@@ -63,9 +63,9 @@ e.g.
     <td><tt>false</tt></td>
   </tr>
   <tr>
-    <td><tt>['hosts']['entries']['ipaddress']['hostnames']</tt></td>
-    <td>entrieshostnames</td>
-    <td>ipaddress hash with hostnames for /etc/hosts</td>
+    <td><tt>['hosts']['entries']['127.0.0.2']['localhost2.localdoman # test for hosts cookbook']</tt></td>
+    <td>entries hash table</td>
+    <td>ipaddress hash with hostnames text field</td>
     <td><tt>true</tt></td>
   </tr>
 </table>
@@ -83,7 +83,8 @@ Include `hosts` in your node's `run_list` with relevant atttributes:
   "name":"my_node",
     "hosts": {
       "entries": {
-	"#127.0.0.1": "hostname.example.com"
+	"127.0.0.2": "localhost2.localdoman # test for hosts cookbook",
+	"www.xxx.yyy.zzz": "foo.example.com foo"
       }
     }
   "run_list": [

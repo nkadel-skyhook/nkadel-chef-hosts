@@ -1,7 +1,7 @@
 # Store hosts as array of arrays
 
 # Allow alternate /etc/hosts name for NIS, and chroot configs
-default['hosts']['file'] = '/etc/hosts.test'
+default['hosts']['file'] = '/etc/hosts'
 default['hosts']['owner'] = 'root'
 default['hosts']['group'] = 'root'
 default['hosts']['mode'] = '064'
@@ -17,5 +17,5 @@ default['hosts']['fqdn_as_ipaddress'] = false
 default['hosts']['ipaddress'] = node['ipaddress']
 
 # Sample host entry
-#default['hosts']['entries']['127.0.0.2']  = "loopback2.localdomain"
+default['hosts']['entries']['127.0.0.2']  = "loopback2.localdomain # test for hosts cookbook"
 
