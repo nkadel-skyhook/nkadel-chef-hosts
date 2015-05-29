@@ -18,6 +18,6 @@ default['hosts']['fqdn_as_loopback'] = true
 # Working junit and some logging tools require only IP address enabled
 default['hosts']['fqdn_as_ipaddress'] = false
 
+default['hosts']['entries'] = {}
 # Sample host entry
 #default['hosts']['entries']['127.0.0.2']  = "loopback2.localdomain # test for hosts cookbook"
-
