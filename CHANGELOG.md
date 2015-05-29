@@ -3,6 +3,8 @@ hosts CHANGELOG
 
 This file is used to list changes made in each version of the hosts cookbook.
 
+0.1.3 (2015-05-29)
+
 0.1.2 (2015-01-29)
 ------------------
 - Change default installation to /etc/hosts.

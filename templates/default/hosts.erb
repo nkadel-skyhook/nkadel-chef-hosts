@@ -5,9 +5,9 @@
 127.0.0.1	localhost localhost.localdomain localhost4 localhost4.localdomain4
 ::1	localhost localhost.localdomain localhost6 localhost6.localdomain6
 # Optional loopback for fqdn
-<% unless node['hosts']['fqdn_as_loopback'] -%><% end %>127.0.0.1	<%= node['hosts']['fqdn'] %>
+<% unless node['hosts']['fqdn_as_loopback'] -%>#<% end %>127.0.0.1	<%= node['hosts']['fqdn'] %>
 # Optional host IP for fqdn
-<% unless node['hosts']['fqdn_as_ipaddress'] -%><% end %><%= node['hosts']['ipaddress'] %>	<%= node['hosts']['fqdn'] %>
+<% unless node['hosts']['fqdn_as_ipaddress'] -%>#<% end %><%= node['hosts']['ipaddress'] %>	<%= node['hosts']['fqdn'] %>
 # Chef node attribute defined addresses
 <% node['hosts']['entries'].each do |ipaddress, names| -%>
 <%= ipaddress %>	<%= names %>

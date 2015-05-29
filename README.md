@@ -1,5 +1,5 @@
 hosts Cookbook
-==================
+==============
 Configure /etc/hosts from template
 
 Requirements
@@ -9,7 +9,7 @@ None required
 
 Attributes
 ----------
-TODO: List your cookbook attributes here.
+
 
 e.g.
 #### hosts::default
@@ -39,34 +39,28 @@ e.g.
     <td><tt>root</tt></td>
   </tr>
   <tr>
-    <td><tt>['hosts']['node']</tt></td>
+    <td><tt>['hosts']['mode']</tt></td>
     <td>string</td>
     <td>mode of hosts file</td>
     <td><tt>0644</tt></td>
   </tr>
   <tr>
+    <td><tt>['hosts']['fqdn']</tt></td>
+    <td>strung</td>
+    <td>FQDN of client, defaults to chef detected</td>
+    <td><tt>true</tt></td>
+  </tr>
+  <tr>
     <td><tt>['hosts']['fqdn_as_loopback']</tt></td>
     <td>boolean</td>
-    <td>use fqdn in loopback entry</td>
+    <td>use FQDN in loopback entry</td>
     <td><tt>true</tt></td>
   </tr>
   <tr>
-    <td><tt>['hosts']['fqdn']</tt></td>
-    <td>string</td>
-    <td>fqdn according to hosts cookbook</td>
-    <td><tt>true</tt></td>
-  </tr>
-  <tr>
-    <td><tt>['hosts']['fqdn_as_ipadress']</tt></td>
+    <td><tt>['hosts']['fqdn_as_ipaddress']</tt></td>
     <td>boolean</td>
-    <td>use fqdn in ipaddress</td>
+    <td>Use FQDN with chef ['hosts']['ipaddress']</td>
     <td><tt>false</tt></td>
-  </tr>
-  <tr>
-    <td><tt>['hosts']['entries']['127.0.0.2']['localhost2.localdoman # test for hosts cookbook']</tt></td>
-    <td>entries hash table</td>
-    <td>ipaddress hash with hostnames text field</td>
-    <td><tt>true</tt></td>
   </tr>
 </table>
 

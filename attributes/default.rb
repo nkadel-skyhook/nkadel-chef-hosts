@@ -6,16 +6,18 @@ default['hosts']['owner'] = 'root'
 default['hosts']['group'] = 'root'
 default['hosts']['mode'] = '064'
 
-# Valid `hostname --fqdn` requires valid fqdn in one of
-# loopback, ipaddress, or DNS in that order
-
-# Default debian Debian style loopback fqdn setting
-default['hosts']['fqdn_as_loopback'] = true
 default['hosts']['fqdn'] = node['fqdn']
-# Working junit and some logging tools require ipaddress, not loopback
-default['hosts']['fqdn_as_ipaddress'] = false
 default['hosts']['ipaddress'] = node['ipaddress']
 
+# Valid `hostname --fqdn` requires valid fqdn in one of
+# loopback, ipaddress, or DNS, in that order
+
+# Default debian Debian style loopback fqdn setting
+# Not compatible wih Cloudera hosts
+default['hosts']['fqdn_as_loopback'] = true
+# Working junit and some logging tools require only IP address enabled
+default['hosts']['fqdn_as_ipaddress'] = false
+
 # Sample host entry
-default['hosts']['entries']['127.0.0.2']  = "loopback2.localdomain # test for hosts cookbook"
+#default['hosts']['entries']['127.0.0.2']  = "loopback2.localdomain # test for hosts cookbook"
 
