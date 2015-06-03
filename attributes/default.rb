@@ -4,7 +4,7 @@
 default['hosts']['file'] = '/etc/hosts'
 default['hosts']['owner'] = 'root'
 default['hosts']['group'] = 'root'
-default['hosts']['mode'] = '064'
+default['hosts']['mode'] = '0644'
 
 default['hosts']['fqdn'] = node['fqdn']
 default['hosts']['ipaddress'] = node['ipaddress']

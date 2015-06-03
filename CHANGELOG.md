@@ -3,7 +3,14 @@ hosts CHANGELOG
 
 This file is used to list changes made in each version of the hosts cookbook.
 
+0.1.4 (2015-06-03)
+------------------
+- Reset perms on /etc/hosts correctly
+
 0.1.3 (2015-05-29)
+------------------
+- Handle fqdn_as_loopback better
+- Handle fqdn_as_ipaddress better
 
 0.1.2 (2015-01-29)
 ------------------
